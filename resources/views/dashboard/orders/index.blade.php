@@ -53,8 +53,10 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <th>@lang('site.client_name')</th>
-                                        <th>@lang('site.price')</th>
-{{--                                        <th>@lang('site.status')</th>--}}
+                                        <th>@lang('site.phone')</th>
+                                        <th>@lang('site.subject')</th>
+                                        <th>@lang('site.message')</th>
+                                        <th>@lang('site.status')</th>
                                         <th>@lang('site.created_at')</th>
                                         <th>@lang('site.action')</th>
                                     </tr>
@@ -62,18 +64,27 @@
                                     @foreach ($orders as $order)
                                         <tr>
                                             <td>{{ $order->client->name }}</td>
-                                            <td>{{ number_format($order->total_price, 2) }}</td>
-                                            {{--<td>--}}
-                                                {{--<button--}}
-                                                    {{--data-status="@lang('site.' . $order->status)"--}}
-                                                    {{--data-url="{{ route('dashboard.orders.update_status', $order->id) }}"--}}
-                                                    {{--data-method="put"--}}
-                                                    {{--data-available-status='["@lang('site.processing')", "@lang('site.finished') "]'--}}
-                                                    {{--class="order-status-btn btn {{ $order->status == 'processing' ? 'btn-warning' : 'btn-success disabled' }} btn-sm"--}}
-                                                {{-->--}}
-                                                    {{--@lang('site.' . $order->status)--}}
-                                                {{--</button>--}}
-                                            {{--</td>--}}
+                                            <td>{{ $order->client->phone }}</td>
+                                            <td>{{ $order->subject }}</td>
+                                            <td>{{ $order->message }}</td>
+                                            <td>
+                                                @if ($order->status == false)
+                                                    @lang('site.not_seen')
+                                                @else
+                                                    @lang('site.seen')
+                                                @endif
+                                            </td>
+                                            {{-- <td>
+                                                <button
+                                                    data-status="@lang('site.' . $order->status)"
+                                                    data-url="{{ route('dashboard.orders.update_status', $order->id) }}"
+                                                    data-method="put"
+                                                    data-available-status='["@lang('site.processing')", "@lang('site.finished') "]'
+                                                    class="order-status-btn btn {{ $order->status == 'processing' ? 'btn-warning' : 'btn-success disabled' }} btn-sm"
+                                                >
+                                                    @lang('site.' . $order->status)
+                                                </button>
+                                            </td> --}}
                                             <td>{{ $order->created_at->toFormattedDateString() }}</td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm order-products"

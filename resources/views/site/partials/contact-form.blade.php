@@ -5,23 +5,27 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="form-group">
-                    <label for="name">name *</label>
+                    <label for="name">@lang('site.name') *</label>
                     <input name="name" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="form-group">
-                    <label for="name">name *</label>
-                    <input name="name" type="text" class="form-control">
+                    <label for="name">@lang('site.phone') *</label>
+                    <input name="phone" type="text" class="form-control">
                 </div>
             </div>
         </div>
         <div class="form_row">
-            <label for="subject">subject *</label>
+            <label for="subject">@lang('site.item-code') *</label>
+            <input name="item_code" type="text" class="form-control">
+        </div>
+        <div class="form_row">
+            <label for="subject">@lang('site.subject') *</label>
             <input name="subject" type="text" class="form-control">
         </div>
         <div class="form_row">
-            <label for="message">your message</label>
+            <label for="message">@lang('site.message')</label>
             <textarea name="message" rows="3" cols="20" id="ContentPlaceHolder1_txtMessage" class="form-control"></textarea>
         </div>
         <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Submit" id="ContentPlaceHolder1_btnSubmit" class="submit_btn">

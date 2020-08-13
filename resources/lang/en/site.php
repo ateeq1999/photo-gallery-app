@@ -126,4 +126,11 @@ return [
     'tel-no' => 'Tel No.',
     'product-code' => 'Product Code',
     'list-back' => 'Back To List',
+    'status' => 'Status',
+    'subject' => 'Subject',
+    'message' => 'Message',
+    'lang' => 'Language',
+    'not_seen' => 'Not Seen',
+    'seen' => 'Seen',
+    'item-code' => 'Item Code',
 ];

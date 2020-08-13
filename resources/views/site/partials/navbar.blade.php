@@ -12,6 +12,22 @@
         {{-- Nab Links --}}
         <nav>
             <ul>
+                <li>
+                    <a id="aProducts" class="product_nav_link">@lang('site.lang')
+                        <img src='{{ asset('demo/img/dropdown-menu.png') }}' alt="Icon" class="dropdown_menu_icon" />
+                    </a>
+                    <ul class="fallback">
+                        <ul class="menu">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li>
+                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </ul>
+                </li>
                 <li><a class="{{ Route::currentRouteName() == 'site.contact-us' ? 'nav_active' : ''}}" href="{{ route('site.contact-us') }}" id="aContactUs">@lang('navbar.contact-us')</a></li>
                 {{-- <li><a href="{{ route('site.careers') }}" id="aCareers">@lang('navbar.careers')</a></li> --}}
                 <li><a class="{{ Route::currentRouteName() == 'site.clients' ? 'nav_active' : ''}}" href="{{ route('site.clients') }}" id="aClients" >@lang('navbar.clients')</a></li>

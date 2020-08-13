@@ -22,7 +22,6 @@ class infoController extends Controller
         $infos=Info::when($request->search,function($q) use($request){
         return $q->whereTranslationLike('bio','%'.$request->search.'%');
         })->latest()->paginate(5);
-        // dd($infos);
         return view('dashboard.infos.index',compact('infos'));
     }
 

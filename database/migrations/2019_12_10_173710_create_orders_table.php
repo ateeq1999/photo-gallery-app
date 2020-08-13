@@ -16,11 +16,14 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('client_id');
-            $table->double('total_price',8,2)->nullable();
-            $table->timestamps();
+            $table->string('item_code');
+            // $table->string('name');
+            // $table->string('phone');
+            $table->string('subject');
+            $table->string('message');
+            $table->boolean('status')->default(false);
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
-
-            
+            $table->timestamps();
         });
     }
 

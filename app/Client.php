@@ -9,10 +9,6 @@ class Client extends Model
     protected $guarded= [];
     protected $appends=['image_path'];
     
-    protected $casts=[
-      'phone'=>'array'
-    ];
-
     public function getImagePathAttribute(){
       return asset('uploads/clients_images/'.$this->image);
     }

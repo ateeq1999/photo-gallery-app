@@ -31,16 +31,18 @@
                 </div>
 
                 <div class="row mt-5">
-                    @foreach ($profile->settings as $setting)
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div class="product_box client_prof">
-                                <h5 class="branch_heading red_color">{{ $setting->title }}</h5>
-                                <p>
-                                    <span>{!!$setting->description!!}</span>
-                                </p>
+                    @if (count($profile->settings > 0))
+                        @foreach ($profile->settings as $setting)
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="product_box client_prof">
+                                    <h5 class="branch_heading red_color">{{ $setting->title }}</h5>
+                                    <p>
+                                        <span>{!!$setting->description!!}</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    @endif
                     <!--product_box-->
                     <div class="clear"></div>
                 </div>

@@ -10,18 +10,10 @@ use App\Profile;
 use App\Setting;
 use App\Info;
 use App\Location;
+use App\Order;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
@@ -62,7 +54,6 @@ class HomeController extends Controller
     public function contact_us()
     {
         $info = Info::first();
-        // dd($info->locations);
         
         $awards = [];
 
@@ -70,12 +61,35 @@ class HomeController extends Controller
     }
     public function contact_us_store(Request $request)
     {
-        dd($request->all());
-        $info = Info::first();
-        // dd($info->locations);
-        
-        $awards = [];
+        // dd($request->all());
 
-        return view('site.pages.contact-us', compact('info'));
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+            'item_code' => 'required',
+        ]);
+
+        $client = Client::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'address' => 'sudan',
+        ]);
+
+        $client->save();
+
+        $order = Order::create([
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'item_code' => $request->item_code,
+            'client_id' => $client->id,
+        ]);
+
+        $order->save();
+
+        session()->flash('success',__('site.message_sendded'));
+
+        return redirect()->back();
     }
 }

@@ -120,5 +120,16 @@ return [
     'list-back' => 'عوده للقائمه',
     'welcome'=> 'نحن <span class="home_video_text_white">نغير مفهوم </span> <span class="home_video_text_red"> التصميم</span>',
     // 'our-profile' => 'ملفنا الشخصى',
-
+    'status' => 'الحاله',
+    'not_seen' => 'لم تقرأ',
+    'seen' => 'مقروءه',
+    'subject' => 'الموصوع',
+    'message' => 'الرساله',
+    'lang' => 'اللغه',
+    'item-code' => 'رمز المنتج',
+    'location' => 'الموقع',
+    'locations' => 'المواقع',
+    'info' => 'معلومه',
+    'infos' => 'معلومات',
+    'all.infos' => 'كل المعلومات',
 ];
