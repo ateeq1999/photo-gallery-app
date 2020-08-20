@@ -7,11 +7,15 @@
                 <div class="page_header">
                     <h1>@lang('site.contact-header')</h1>
                 </div>
-                <!--page_header-->
-                <h2 class="page_h2 mb-5">{{ $info->bio }}</h2>
-                <p class="change_block_txt mb-5">
-                    {!!$info->description!!}
-                </p>
+                @if ($info)
+                    <!--page_header-->
+                    <h2 class="page_h2 mb-5">
+                        {{ $info->bio }}
+                    </h2>
+                    <p class="change_block_txt mb-5">
+                        {!!$info->description!!}
+                    </p>
+                @endif
             
                 <div class="row mt-5">
                     @include('site.partials.contact-form')

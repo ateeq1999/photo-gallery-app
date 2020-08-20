@@ -5,33 +5,35 @@
         <section id="wrapper">
     
             <div class="content_wrap container">
-                <div class="page_header">
-                    <div class="row">
-                        <h1> @lang('site.our_profile') </h1>
-                    </div>
-                </div>
-                <!--page_header-->
-                <div class="row">
-                    <h2 class="page_h2">{{ $profile->title }}</h2>
-                </div>
-                <!--we_change_block-->
-                <div class="row mt-5">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <blockquote class="blockquote text-right">
-                            <p class="mb-0">
-                                {!!$profile->bio!!}
-                            </p>
-                        </blockquote>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div id="we_change_block_img">
-                            <img src="{{ $profile->image_path }}" alt="{{ $profile->title }}" class="img_responsive">
+                @if ($profile)
+                    <div class="page_header">
+                        <div class="row">
+                            <h1> @lang('site.our_profile') </h1>
                         </div>
                     </div>
-                </div>
+                    <!--page_header-->
+                    <div class="row">
+                        <h2 class="page_h2">{{ $profile->title }}</h2>
+                    </div>
+                    <!--we_change_block-->
+                    <div class="row mt-5">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <blockquote class="blockquote text-right">
+                                <p class="mb-0">
+                                    {!!$profile->bio!!}
+                                </p>
+                            </blockquote>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div id="we_change_block_img">
+                                <img src="{{ $profile->image_path }}" alt="{{ $profile->title }}" class="img_responsive">
+                            </div>
+                        </div>
+                    </div>
+                @endif
 
                 <div class="row mt-5">
-                    @if (count($profile->settings > 0))
+                    @if (count($profile->settings) > 0)
                         @foreach ($profile->settings as $setting)
                             <div class="col-sm-12 col-md-4 col-lg-4">
                                 <div class="product_box client_prof">
