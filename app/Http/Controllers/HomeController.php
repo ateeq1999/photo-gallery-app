@@ -37,7 +37,12 @@ class HomeController extends Controller
 
     public function profile()
     {
-        $profile = Profile::first()->load('settings');
+        if(Profile::first() != null){
+            $profile = Profile::first()->load('settings');
+        }else{
+            $profile = Profile::first();
+        }
+        
         $categories = Category::all();
 
         return view('site.pages.profile', compact('categories','profile'));

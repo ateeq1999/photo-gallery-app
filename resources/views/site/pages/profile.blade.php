@@ -33,7 +33,7 @@
                 @endif
 
                 <div class="row mt-5">
-                    @if (count($profile->settings) > 0)
+                    @if (!empty($profile->settings))
                         @foreach ($profile->settings as $setting)
                             <div class="col-sm-12 col-md-4 col-lg-4">
                                 <div class="product_box client_prof">
