@@ -6,11 +6,13 @@
             <img src="{{ asset('demo/img/prvbtn.png') }}" alt="prev"></a>
         <div class="viewport">
             <ul class="overview" style="width: 33522px; left: -14208px;">
-                @foreach ($clients as $client)
-                    <li>
-                        <img src="{{$client->image_path}}" alt="">
-                    </li>
-                @endforeach
+                @if (count($clients) > 0)
+                    @foreach ($clients as $client)
+                        <li>
+                            <img src="{{$client->image_path}}" alt="">
+                        </li>
+                    @endforeach
+                @endif
             </ul>
         </div>
         <a class="buttons next" href="#">

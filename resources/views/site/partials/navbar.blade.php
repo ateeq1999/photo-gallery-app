@@ -36,14 +36,15 @@
                         <img src='{{ asset('demo/img/dropdown-menu.png') }}' alt="Icon" class="dropdown_menu_icon" />
                     </a>
                     <ul class="fallback">
-                        @foreach ($categories as $category)
-                            <li>
-                                <a class="{{ Route::currentRouteName() == 'site.category_products' ? 'nav_active' : ''}}" href='{{ route('site.category_products', $category->id) }}'>
-                                    {{ $category->name }}
-                                </a>
-                            </li>
-                        @endforeach
-                            
+                        @if (count($categories) > 0)
+                            @foreach ($categories as $category)
+                                <li>
+                                    <a class="{{ Route::currentRouteName() == 'site.category_products' ? 'nav_active' : ''}}" href='{{ route('site.category_products', $category->id) }}'>
+                                        {{ $category->name }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </li>
                 <li><a href="{{ route('site.profile') }}" class="{{ Route::currentRouteName() == 'site.profile' ? 'nav_active' : ''}}" id="aProfile">@lang('navbar.profile')</a></li>

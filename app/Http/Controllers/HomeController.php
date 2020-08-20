@@ -61,8 +61,6 @@ class HomeController extends Controller
     }
     public function contact_us_store(Request $request)
     {
-        // dd($request->all());
-
         $request->validate([
             'name' => 'required',
             'phone' => 'required',
