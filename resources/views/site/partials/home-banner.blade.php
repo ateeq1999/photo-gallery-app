@@ -1,4 +1,4 @@
-<section id="home_banner">
+<section id="home_banner mt-0">
     <article class="home_video full_wid banner_bg">
         <div class="home_video_text">
             @lang('site.welcome')

@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="Description" content="Al Hawai Office Furniture &amp; Equipment Co. L.L.C. has proudly served many clients with high quality furniture and equipment." /><meta name="Keywords" />
-    <title>Site</title>
-    {{-- <title>@lang('site.site')</title> --}}
+    <meta name="Description" content="Dar Alsaig" /><meta name="Keywords" />
+    <title>@lang('site.site-title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico" />
     @include('site.partials.csslinks')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">

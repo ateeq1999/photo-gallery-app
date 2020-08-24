@@ -133,4 +133,11 @@ return [
     'not_seen' => 'Not Seen',
     'seen' => 'Seen',
     'item-code' => 'Item Code',
+    'site-title' => 'Dar Alsaig',
+    'rights' => 'Powered by Ateeq Ali © Copyright 2020. Khalid Hashim
+    ® All Rights Reserved',
+    'address1' => 'Khartoum - Cros Algmhwria road with Atbrah Street',
+    'address2' => 'Khartoum - Albaldia Street',
+    'e-title' => 'Email your issues and suggestion for the following email addresses',
+    'work-h' => 'From Saturday to Thursday, 8:00 AM - 8:00 PM, call us at',
 ];

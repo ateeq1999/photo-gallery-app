@@ -4,31 +4,31 @@
         <div class="bx-wrapper" style="max-width: 100%;">
             <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 178px;">
                 <ul class="bxslider" style="width: 1815%; position: relative; transition-duration: 0.5s; transform: translate3d(-510px, 0px, 0px);">
-                    <li style="float: left; list-style: none; position: relative; width: 254px;" class="bx-clone">
+                    <li style="{{ app()->getLocale() == 'en' ? 'float: right; list-style: none; position: relative; width: 254px;' : 'float: left; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
                         <div class="bxslider_div_bx">
                             <a class="fancybox" rel="gallery1" href="/cms/UPLOADS/Award/MOF Interior 2017 Office Furniture.jpg">
-                                <img src="/cms/UPLOADS/Award/thumbhomeMOF-Interior-2017-Office-Furniture.jpg" alt="MOF Interior 2017" class="img_responsive">
+                                <img src="{{ asset('demo/clients_images/default.jpg') }}" alt="MOF Interior 2017" class="img_responsive">
                             </a>
                         </div>
                     </li>
             
-                    <li style="float: left; list-style: none; position: relative; width: 254px;">
+                    <li style="{{ app()->getLocale() == 'en' ? 'float: right; list-style: none; position: relative; width: 254px;' : 'float: left; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
                         <div class="bxslider_div_bx">
                             <a class="fancybox" rel="gallery1" href="/cms/UPLOADS/Award/Department of Economic Development Office Furniture.jpg">
-                                <img src="/cms/UPLOADS/Award/thumbhomeDepartment of Economic Development Office Furniture.jpg" alt="Department of Economic Development" class="img_responsive">
+                                <img src="{{ asset('demo/clients_images/default.jpg') }}" alt="Department of Economic Development" class="img_responsive">
                             </a>
                         </div>
                     </li>
                 
-                    <li style="float: left; list-style: none; position: relative; width: 254px;">
+                    <li style="{{ app()->getLocale() == 'en' ? 'float: right; list-style: none; position: relative; width: 254px;' : 'float: left; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
                         <div class="bxslider_div_bx">
                             <a class="fancybox" rel="gallery1" href="/cms/UPLOADS/Award/Dubai Customs  Office Furniture.jpg">
-                                <img src="/cms/UPLOADS/Award/thumbhomeDubai Customs  Office Furniture.jpg" alt="Dubai Customs" class="img_responsive">
+                                <img src="{{ asset('demo/clients_images/default.jpg') }}" alt="Dubai Customs" class="img_responsive">
                             </a>
                         </div>
                     </li>
                 
-                    <li style="float: left; list-style: none; position: relative; width: 254px;">
+                    <li style="{{ app()->getLocale() == 'en' ? 'float: right; list-style: none; position: relative; width: 254px;' : 'float: left; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
                         <div class="bxslider_div_bx">
                             <a class="fancybox" rel="gallery1" href="/cms/UPLOADS/Award/Dubai Police  Office Furniture.jpg">
                                 <img src="/cms/UPLOADS/Award/thumbhomeDubai Police  Office Furniture.jpg" alt="Dubai Police" class="img_responsive">

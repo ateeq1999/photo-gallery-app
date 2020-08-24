@@ -1,0 +1,19 @@
+.entran{
+    float: left;
+    list-style: none;
+    position: relative;
+    width: 254px;
+}
+.artran{
+    float: right;
+    list-style: none;
+    position: relative;
+    width: 254px;
+}
+
+.ar-slid{
+    width: 715%; position: relative; transition-duration: 0s; transform: translate3d(255px, 0px, 0px);
+}
+.en-slid{
+    width: 715%; position: relative; transition-duration: 0s; transform: translate3d(-255px, 0px, 0px);
+}

@@ -1,6 +1,9 @@
 <?php
 
 
+Route::get('/', function () {
+    return redirect()->route('site.home');
+});
 Route::get('/clients', function () {
     return view('site.pages.clients');
 });
