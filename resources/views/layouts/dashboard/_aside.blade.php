@@ -44,8 +44,8 @@
                 <li><a href="{{ route('dashboard.locations.index') }}"><i class="fa fa-th"></i><span>@lang('site.locations')</span></a></li>
             @endif
             
-            @if (auth()->user()->hasPermission('read_settings'))
-                <li><a href="{{ route('dashboard.settings.index') }}"><i class="fa fa-th"></i><span>@lang('site.settings')</span></a></li>
+            @if (auth()->user()->hasPermission('read_awards'))
+                <li><a href="{{ route('dashboard.awards.index') }}"><i class="fa fa-th"></i><span>@lang('site.awards')</span></a></li>
             @endif
            
             @if (auth()->user()->hasPermission('read_infos'))

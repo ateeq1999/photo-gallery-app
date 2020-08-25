@@ -14,7 +14,9 @@ class CreateAwardsTable extends Migration
     public function up()
     {
         Schema::create('awards', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->bigIncrements('id');
+            $table->string('image')->default('default.jpg');
             $table->timestamps();
         });
     }

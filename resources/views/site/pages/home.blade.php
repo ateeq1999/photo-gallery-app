@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-4">
-                @include('site.home-service-awards')
+                @include('site.home-service-awards', [ 'awards' => $awards ])
             </div>
         </div>
         <div class="clear"></div>

@@ -11,6 +11,7 @@ use App\Setting;
 use App\Info;
 use App\Location;
 use App\Order;
+use App\Award;
 
 class HomeController extends Controller
 {
@@ -19,8 +20,9 @@ class HomeController extends Controller
     {
         $clients = Client::all();
         $categories = Category::all();
+        $awards = Award::all();
         
-        return view('site.pages.home', compact('categories','clients'));
+        return view('site.pages.home', compact('categories', 'clients', 'awards'));
     }
 
     public function category_products(Category $category)

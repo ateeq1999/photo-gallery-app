@@ -140,4 +140,7 @@ return [
     'address2' => 'Khartoum - Albaldia Street',
     'e-title' => 'Email your issues and suggestion for the following email addresses',
     'work-h' => 'From Saturday to Thursday, 8:00 AM - 8:00 PM, call us at',
+    'awards' => 'Awards',
+    'award' => 'Award',
+    'app-name' => 'Dar Alsaig',
 ];

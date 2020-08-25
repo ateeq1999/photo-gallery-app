@@ -20,7 +20,7 @@
 
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-md-12">
 
                     <div class="box box-primary">
 
@@ -130,31 +130,6 @@
                             </div>
 
                         @endif
-
-                    </div><!-- end of box -->
-
-                </div><!-- end of col -->
-
-                <div class="col-md-4">
-
-                    <div class="box box-primary">
-
-                        <div class="box-header">
-                            <h3 class="box-title" style="margin-bottom: 10px">@lang('site.show_products')</h3>
-                        </div><!-- end of box header -->
-
-                        <div class="box-body">
-
-                            <div style="display: none; flex-direction: column; align-items: center;" id="loading">
-                                <div class="loader"></div>
-                                <p style="margin-top: 10px">@lang('site.loading')</p>
-                            </div>
-
-                            <div id="order-product-list">
-
-                            </div><!-- end of order product list -->
-
-                        </div><!-- end of box body -->
 
                     </div><!-- end of box -->
 

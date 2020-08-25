@@ -13,6 +13,7 @@
             Route::resource('profiles','ProfileController')->except(['show']);
             Route::resource('settings','SettingController')->except(['show']);
             Route::resource('categories','CategoryController')->except(['show']);
+            Route::resource('awards','AwardController')->except(['show']);
             Route::resource('infos','InfoController')->except(['show']);
             Route::resource('locations','LocationController')->except(['show']);
             Route::resource('products','ProductController')->except(['show']);

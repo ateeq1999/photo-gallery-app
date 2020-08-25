@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Blank Page</title>
+    <title>@lang('site.app-name')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
@@ -89,10 +89,10 @@
     <header class="main-header">
 
         {{--<!-- Logo -->--}}
-        <a href="{{ asset('dashboard') }}/index2.html" class="logo">
+        <a href="{{ asset('dashboard') }}" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
-            <span class="logo-mini"><b>A</b>LT</span>
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-mini"><b>D</b>Als</span>
+            <span class="logo-lg"><b>Dar</b>Alsaig</span>
         </a>
 
         <nav class="navbar navbar-static-top">
@@ -108,19 +108,18 @@
                 <ul class="nav navbar-nav">
 
                     {{--<!-- Notifications: style can be found in dropdown.less -->--}}
-                    <li class="dropdown notifications-menu">
+                    {{-- <li class="dropdown notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <span class="label label-warning"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
+                            <li class="header">{{ $notify ?? 0 }}</li>
                             <li>
-                                {{--<!-- inner menu: contains the actual data -->--}}
                                 <ul class="menu">
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            <i class="fa fa-users text-aqua"></i> 5 new cruds
                                         </a>
                                     </li>
                                 </ul>
@@ -129,7 +128,7 @@
                                 <a href="#">View all</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                     {{--<!-- Tasks: style can be found in dropdown.less -->--}}
                     <li class="dropdown tasks-menu">
@@ -154,18 +153,17 @@
                     <li class="dropdown user user-menu">
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
+                            <img src="{{ auth()->user()->image_path }}" class="user-image" alt="User Image">
                         <span class="hidden-xs">{{ auth()->user()->first_name }}  {{ auth()->user()->last_name }}</span>
                         </a>
                         <ul class="dropdown-menu">
 
                             {{--<!-- User image -->--}}
                             <li class="user-header">
-                                <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                <img src="{{ auth()->user()->image_path }}" class="img-circle" alt="User Image">
 
                                 <p>
                                     {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}
-                                    <small>Member since 2 days</small>
                                 </p>
                             </li>
 
