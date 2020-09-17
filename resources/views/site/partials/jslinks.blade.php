@@ -5,11 +5,11 @@
 <script src='{{ asset('demo/js/slippry.min.js') }}'></script>
 <script src='{{ asset('demo/js/jquery.fancybox.js') }}'></script>
 
-{{-- @if (app()->getLocale() == 'ar')
+@if (app()->getLocale() == 'ar')
     <script src='{{ asset('demo/js/jquery.bxslider-ar.js') }}'></script>
 @else
 <script src='{{ asset('demo/js/jquery.bxslider.js') }}'></script>
-@endif --}}
-<script src='{{ asset('demo/js/jquery.bxslider.js') }}'></script>
+@endif
+{{-- <script src='{{ asset('demo/js/jquery.bxslider.js') }}'></script> --}}
 
 @include('site.partials.clients-js')

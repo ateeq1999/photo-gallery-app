@@ -143,4 +143,5 @@ return [
     'awards' => 'Awards',
     'award' => 'Award',
     'app-name' => 'Dar Alsaig',
+    'contactus' => 'CONTACT US',
 ];

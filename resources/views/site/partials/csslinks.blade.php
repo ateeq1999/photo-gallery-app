@@ -8,6 +8,7 @@
 @if (app()->getLocale() == 'ar')
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/font-awesome-rtl.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    <link href="{{ asset('demo/css/bxslider.css') }}" rel="stylesheet" type="text/css" />
     <style>
         body, h1, h2, h3, h4, h5, h6 {
             font-family: 'Cairo', sans-serif !important;

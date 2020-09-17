@@ -3,9 +3,9 @@
     <div class="award_logos">
         <div class="bx-wrapper" style="max-width: 100%;">
             <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 178px;">
-                <ul class="bxslider" style="width: 1815%; position: relative; transition-duration: 0.5s; transform: translate3d(-510px, 0px, 0px);">
+                <ul class="bxslider" style="{{ app()->getLocale() == 'ar' ? 'width: 1815%; position: relative; transition-duration: 0.5s; transform: translate3d(510px, 0px, 0px);' : 'width: 1815%; position: relative; transition-duration: 0.5s; transform: translate3d(-510px, 0px, 0px);' }}">
                     @foreach ($awards as $award)
-                        <li style="{{ app()->getLocale() == 'ar' ? 'float: right; list-style: none; position: relative; width: 254px;' : 'float: left; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
+                        <li style="{{ app()->getLocale() == 'ar' ? 'float: right !important; list-style: none; position: relative; width: 254px;' : 'float: left !important; list-style: none; position: relative; width: 254px;' }}" class="bx-clone">
                             <div class="bxslider_div_bx">
                                 <a class="fancybox" rel="gallery1" href="#">
                                     <img src="{{ $award->image_path }}" alt="Awards" class="img_responsive">
