@@ -2,8 +2,8 @@
     <article class="header_inner">
         {{-- Logo --}}
         <div class="logo">
-            <a href='{{ route('site.home') }}'>
-            <img src='{{ asset('demo/img/logo.png') }}' alt="logo" /></a>
+            {{-- <a href='{{ route('site.home') }}'> --}}
+            <img style="width: 75px; height: 75px" src='{{ asset('demo/img/logo.jpg') }}' alt="logo" /></a>
         </div>
         {{-- Navbar Toggle --}}
         <div id="nav_toggle">
